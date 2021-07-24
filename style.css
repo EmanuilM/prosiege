@@ -3,7 +3,8 @@
 }
 
 .buttons { 
-  text-align: center;
+    position: relative;
+    right: 23px;
 }
 
 h1 { 
