@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="customer.css">
+    <!-- <script src="../scripts/index.js"></script> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>PAPANTONIOU</h1>
+    <p>Products</p>
+    <p class="quantity">Quantity</p>
+    <p class="ppp">PPP</p>
+    <p class="price">Price</p>
+
+    
+        <div class="products">
+            <div class="product">
+                <label for="">MEDIUM</label>
+                <input type="number">
+                <span>1.20</span>
+                <span class="mediumPrice" id="price"></span>
+            </div>
+            <br>
+            <div class="product">
+                <label for="">S/M</label>
+                <input type="number"> 
+                <span>1.00</span>
+                <span class="smPrice" id="price"></span>
+            </div>
+            <br>
+            <div class="product">
+                <label for="">BLACK</label>
+                <input type="number"> 
+                <span>1.20</span>
+                <span class="blackPrice" id="price"></span>
+            </div>
+            <br>
+            <div class="product">
+                <label for="">GREEK</label>
+                <input type="number"> 
+                <span>1.60</span>
+                <span class="greekPrice" id="price"></span>
+            </div>
+            <br>
+            <div class="product">
+                <label for="">ARABIC SMALL</label>
+                <input type="number"> 
+                <span>0.86</span>
+                <span class="arabicSmallPrice" id="price"></span>
+            </div>
+            <br>
+            <div class="product">
+                <label for="">ARABIC BIG</label>
+                <input type="number"> 
+                <span>1.00</span>
+                <span class="arabicBigPrice" id="price"></span>
+            </div>
+            <br>
+        </div>
+
+    
+        
+
+        <div class="action-buttons">
+            <a href="../index.html">
+                <button class="button orange backBtn">Back</button>
+    
+            </a>
+    
+            <button class="button orange" id="btn">Calculate</button>
+        </div>
+        
+        <div class="totalResult">
+            <p>Price : </p>
+            <div class="space">
+                <p class="priceWithOutDds"></p>
+            </div>
+            <p>VAT :</p>
+            <div class="space">
+                <p class="vat"></p>
+            </div>
+            <p>Total :</p>
+            <div class="total space">
+                <p class="totalSum"></p>
+            </div>
+    
+
+  
+</body>
+
+<script>
+    const prices = { 
+        "MEDIUM" : 1.20,
+        "S/M" : 1,
+        "BLACK" : 1.20,
+        "GREEK" : 1.60,
+        "ARABIC SMALL" : 0.86,
+        "ARABIC BIG" : 1,
+    }
+
+
+    const products = document.querySelectorAll('input');
+   
+    
+    document.querySelector('#btn').addEventListener('click' , () => { 
+        const mediumQuantity = Number(products[0].value);
+        const smQuantity = Number(products[1].value);
+        const blackQuantity = Number(products[2].value);
+        const greekQuantity = Number(products[3].value);
+        const arabicSmallQuantity = Number(products[4].value);
+        const arabicBigQuantity = Number(products[5].value);
+
+
+        const mediumPrice = Number((Number(mediumQuantity) * prices['MEDIUM']).toFixed(2));
+        const smPrice = Number((Number(smQuantity) * prices['S/M']).toFixed(2));
+        const blackPrice = Number((Number(blackQuantity) * prices['BLACK']).toFixed(2));
+        const greekPrice = Number((Number(greekQuantity) * prices['GREEK']).toFixed(2));
+        const arabicSmallPrice = Number((Number(arabicSmallQuantity) * prices['ARABIC SMALL']).toFixed(2));
+        const arabicBigPrice = Number((Number(arabicBigQuantity) * prices['ARABIC BIG']).toFixed(2));
+       
+
+        const allPrices = [
+            mediumPrice,
+            smPrice,
+            blackPrice,
+            greekPrice,
+            arabicSmallPrice,
+            arabicBigQuantity,
+        ]
+        let priceWithOutDDS = allPrices.reduce((a,c) => { 
+            return a+c;
+        },0)
+
+        document.querySelector('.mediumPrice').textContent = mediumPrice.toFixed(2);
+            document.querySelector('.smPrice').textContent = smPrice.toFixed(2);
+            document.querySelector('.blackPrice').textContent = blackPrice.toFixed(2);
+            document.querySelector('.greekPrice').textContent = greekPrice.toFixed(2);
+            document.querySelector('.arabicSmallPrice').textContent = arabicSmallPrice.toFixed(2);
+            document.querySelector('.arabicBigPrice').textContent = arabicBigPrice.toFixed(2);
+        
+
+            priceWithOutDDS = priceWithOutDDS.toFixed(2);
+            document.querySelector('.priceWithOutDds').textContent = priceWithOutDDS
+            const vat =  (Math.round(Number(priceWithOutDDS) *  0.05 * 100) / 100);
+            const totalPrice = Number(priceWithOutDDS) + Number(vat);
+            document.querySelector('.vat').textContent = vat
+            document.querySelector('.totalSum').textContent = totalPrice.toFixed(2);
+    })
+</script>
+
+</html>

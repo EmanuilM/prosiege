@@ -1,0 +1,184 @@
+html { 
+    width: 72px;
+}
+
+h1 { 
+    width: 181px;
+}
+
+
+#btn { 
+    position: relative;
+    top: -21px;
+    right: -98px;
+}
+
+
+.products { 
+    margin-top: -96px;
+}
+
+.products div { 
+    margin-top: -40px;
+}
+
+.quantity { 
+    position: relative;
+    top: -34px;
+    right: -152px;
+}
+
+.price { 
+    position: relative;
+    top: -103px;
+    right: -281px;
+}
+
+.ppp { 
+    position: relative;
+    top: -67px;
+    right: -232px;
+}
+
+.products input {
+    position: relative;
+    right: -156px;
+    top: -20px;
+    width: 38px;
+}
+
+.products span{
+    position: relative;
+    top: -42px;
+    right: -232px;
+}
+
+.products label { 
+    white-space: nowrap;
+}
+
+#price{
+    position: relative;
+    top: -61px;
+    right: -284px;
+    display: flex;
+}
+
+
+
+
+
+
+.button{
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline:0;
+    width: 127px;
+  }
+  .button:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+  
+  .button:hover,
+  .button:focus {
+    color:white;
+    text-decoration: none;
+    outline:0;
+  }
+  
+  .button:active,
+  .button.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+  
+  .orange{
+    text-shadow: 0px -1px 0px #ca6a00;
+    color: #000000;
+    background-color: #E88801;
+    background-image: -moz-linear-gradient(top, #ffa61f, #ca6a00);
+    background-image: -ms-linear-gradient(top, #ffa61f, #ca6a00);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa61f), to(#ca6a00));
+    background-image: -webkit-linear-gradient(top, #ffa61f, #ca6a00);
+    background-image: -o-linear-gradient(top, #ffa61f, #ca6a00);
+    background-image: linear-gradient(top, #ffa61f, #ca6a00);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa61f', endColorstr='#ca6a00', GradientType=0);
+    border-color: #E88801 #ca6a00 #ca6a00 #E88801;
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.25);
+  }
+
+
+  .thimonia{
+    width: 127;;
+  }
+
+  .action-buttons { 
+    position: relative;
+    top: -12px;
+  }
+
+  #btn { 
+    position: relative;
+    right: -73px;
+    top: -34px;
+  }
+
+  .backBtn { 
+    width: 55px;
+  }
+
+  .totalResult { 
+    position: relative;
+    top: -121px;
+    right: -238px;
+  }
+
+  .price {
+    position: relative;
+    top: -102px;
+    right: -284px;
+  }
+
+  .priceWithOutDds{
+    position: relative;
+    top: -26px;
+    right: -59px;
+}
+
+.vat { 
+    position: relative;
+    top: -26px;
+    right: -59px;
+}
+
+.totalSum { 
+  position: relative;
+  top: -26px;
+  right: -54px;
+}
+
+.space { 
+    margin: -7px;
+    height: 0px;
+}
+
+.product{
+    height: 56px;
+}
