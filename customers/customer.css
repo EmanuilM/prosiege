@@ -19,9 +19,9 @@ h1 {
 }
 
 .quantity { 
-    position: relative;
-    top: -34px;
-    right: -152px;
+  position: relative;
+  top: -34px;
+  right: -166px;
 }
 
 .price { 
@@ -151,8 +151,6 @@ h1 {
   .totalResult p { 
     font-size: 21px;
   }
-
- 
 
   .priceWithOutDds{
     position: relative;
