@@ -2,6 +2,20 @@
     margin: 7px 21px;
 }
 
+.buttons { 
+    position: relative;
+    left: -20px;
+}
+
+h1 { 
+ text-align: center;
+}
+
+.buttons button { 
+  height: 76px;
+  width: 285px;
+}
+
 .button{
     font-family: 'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;

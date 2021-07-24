@@ -7,11 +7,7 @@ h1 {
 }
 
 
-#btn { 
-    position: relative;
-    top: -21px;
-    right: -98px;
-}
+
 
 
 .products { 
@@ -30,14 +26,14 @@ h1 {
 
 .price { 
     position: relative;
-    top: -103px;
-    right: -281px;
+    top: -102px;
+    right: -274px;
 }
 
 .ppp { 
-    position: relative;
-    top: -67px;
-    right: -232px;
+  position: relative;
+  top: -67px;
+  right: -221px;
 }
 
 .products input {
@@ -48,9 +44,9 @@ h1 {
 }
 
 .products span{
-    position: relative;
-    top: -42px;
-    right: -232px;
+  position: relative;
+  top: -46px;
+  right: -213px;
 }
 
 .products label { 
@@ -58,10 +54,10 @@ h1 {
 }
 
 #price{
-    position: relative;
-    top: -61px;
-    right: -284px;
-    display: flex;
+  position: relative;
+  top: -74px;
+  right: -271px;
+  display: flex;
 }
 
 
@@ -136,7 +132,7 @@ h1 {
 
   #btn { 
     position: relative;
-    right: -73px;
+    right: -68px;
     top: -34px;
   }
 
@@ -146,39 +142,47 @@ h1 {
 
   .totalResult { 
     position: relative;
-    top: -121px;
-    right: -238px;
+    top: -122px;
+    right: -209px;
   }
 
-  .price {
-    position: relative;
-    top: -102px;
-    right: -284px;
+  .totalResult p { 
+    font-size: 21px;
   }
+
+ 
 
   .priceWithOutDds{
     position: relative;
-    top: -26px;
-    right: -59px;
+    top: -31px;
+    right: -78px;
 }
 
 .vat { 
-    position: relative;
-    top: -26px;
-    right: -59px;
+  position: relative;
+  top: -31px;
+  right: -78px;
 }
 
 .totalSum { 
   position: relative;
-  top: -26px;
-  right: -54px;
+  top: -32px;
+  right: -77px;
 }
 
 .space { 
-    margin: -7px;
-    height: 0px;
+  margin: -17px;
+  height: 0px;
+}
+
+.space p {
+  font-size: 24px;
 }
 
 .product{
     height: 56px;
+}
+
+.product span { 
+  font-size: 24px;
 }
