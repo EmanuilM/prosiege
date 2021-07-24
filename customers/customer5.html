@@ -160,8 +160,8 @@
             document.querySelector('.priceWithOutDds').textContent = priceWithOutDDS
             const vat =  (Math.round(Number(priceWithOutDDS) *  0.05 * 100) / 100);
             const totalPrice = Number(priceWithOutDDS) + Number(vat);
-             document.querySelector('.vat').textContent = vat
-             document.querySelector('.totalSum').textContent = totalPrice.toFixed(2);
+            document.querySelector('.vat').textContent = vat
+            document.querySelector('.totalSum').textContent = totalPrice.toFixed(2);
 
 
     })

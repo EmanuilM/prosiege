@@ -108,11 +108,6 @@
         <div class="total space">
             <p class="totalSum"></p>
         </div>
-
-        <!-- <p class="priceWithOutDDS">Price : 100.25</p>
-    <p class="vat">VAT : 5.30</p>
-    <div></div>
-    <p class="totalPrice">Total : 250.00</p> -->
     </div>
 
 
@@ -190,7 +185,7 @@
             document.querySelector('.priceWithOutDds').textContent = priceWithOutDDS
             const vat =  (Math.round(Number(priceWithOutDDS) *  0.05 * 100) / 100);
             const totalPrice = Number(priceWithOutDDS) + Number(vat);
-             document.querySelector('.vat').textContent = vat
+             document.querySelector('.vat').textContent = vat;
              document.querySelector('.totalSum').textContent = totalPrice.toFixed(2);
 
 
