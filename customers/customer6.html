@@ -47,34 +47,6 @@
             <span class="blackPrice" id="price"></span>
         </div>
         <br>
-        <div  class="product">
-            <label for="">PARTY</label>
-            <input type="number">
-            <span>1.06</span>
-            <span class="partyPrice" id="price"></span>
-        </div>
-        <br>
-        <div  class="product">
-            <label for="">GREEK</label>
-            <input type="number">
-            <span>0.96</span>
-            <span class="greekPrice" id="price"></span>
-        </div>
-        <br>
-        <div  class="product">
-            <label for="">ARABIC SMALL</label>
-            <input type="number">
-            <span>0.68</span>
-            <span class="arabicSmallPrice" id="price"></span>
-        </div>
-        <br>
-        <div  class="product">
-            <label for="">ARABIC BIG</label>
-            <input type="number">
-            <span>0.85</span>
-            <span class="arabicBigPrice" id="price"></span>
-        </div>
-        <br>
     </div>
 
 
@@ -99,7 +71,7 @@
         <div class="total space">
             <p class="totalSum"></p>
         </div>
- 
+
     </div>
 
 
@@ -108,14 +80,10 @@
 
 <script>
     const prices = {
-        "MEDIUM" : 1.10,
-        "S/M" : 0.86,
-        "PAFITIKI" : 1.10,
-        "BLACK" : 1.10,
-        "PARTY"  : 1.06,
-        "GREEK" : 0.96,
-        "ARABIC SMALL" : 0.68,
-        "ARABIC BIG" : 0.85,
+        "MEDIUM": 1.30,
+        "S/M": 1,
+        "PAFITIKI": 1.42,
+        "BLACK": 1.36,
     }
     const products = document.querySelectorAll('input');
 
@@ -151,26 +119,26 @@
             arabicSmallPrice,
             arabicBigPrice,
         ]
-        let priceWithOutDDS = allPrices.reduce((a,c) => { 
-            return a+c;
-        },0)
+        let priceWithOutDDS = allPrices.reduce((a, c) => {
+            return a + c;
+        }, 0)
 
-            document.querySelector('.mediumPrice').textContent = mediumPrice.toFixed(2);
-            document.querySelector('.smPrice').textContent = smPrice.toFixed(2);
-            document.querySelector('.pafitikiPrice').textContent = pafitikiPrice.toFixed(2);
-            document.querySelector('.blackPrice').textContent = blackPrice.toFixed(2);
-            document.querySelector('.partyPrice').textContent = partyPrice.toFixed(2);
-            document.querySelector('.greekPrice').textContent = greekPrice.toFixed(2);
-            document.querySelector('.arabicSmallPrice').textContent = arabicSmallPrice.toFixed(2);
-            document.querySelector('.arabicBigPrice').textContent = arabicBigPrice.toFixed(2);
+        document.querySelector('.mediumPrice').textContent = mediumPrice.toFixed(2);
+        document.querySelector('.smPrice').textContent = smPrice.toFixed(2);
+        document.querySelector('.pafitikiPrice').textContent = pafitikiPrice.toFixed(2);
+        document.querySelector('.blackPrice').textContent = blackPrice.toFixed(2);
+        document.querySelector('.partyPrice').textContent = partyPrice.toFixed(2);
+        document.querySelector('.greekPrice').textContent = greekPrice.toFixed(2);
+        document.querySelector('.arabicSmallPrice').textContent = arabicSmallPrice.toFixed(2);
+        document.querySelector('.arabicBigPrice').textContent = arabicBigPrice.toFixed(2);
 
 
-            priceWithOutDDS = priceWithOutDDS.toFixed(2);
-            document.querySelector('.priceWithOutDds').textContent = priceWithOutDDS
-            const vat =  (Math.round(Number(priceWithOutDDS) *  0.05 * 100) / 100);
-            const totalPrice = Number(priceWithOutDDS) + Number(vat);
-            document.querySelector('.vat').textContent = vat
-            document.querySelector('.totalSum').textContent = totalPrice.toFixed(2);
+        priceWithOutDDS = priceWithOutDDS.toFixed(2);
+        document.querySelector('.priceWithOutDds').textContent = priceWithOutDDS
+        const vat = (Math.round(Number(priceWithOutDDS) * 0.05 * 100) / 100);
+        const totalPrice = Number(priceWithOutDDS) + Number(vat);
+        document.querySelector('.vat').textContent = vat
+        document.querySelector('.totalSum').textContent = totalPrice.toFixed(2);
     })
 </script>
 
