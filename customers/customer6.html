@@ -94,30 +94,17 @@
         const smQuantity = Number(products[1].value);
         const pafitikiQuantity = Number(products[2].value);
         const blackQuantity = Number(products[3].value);
-        const partyQuantity = Number(products[4].value);
-        const greekQuantity = Number(products[5].value);
-        const arabicSmallQuantity = Number(products[6].value);
-        const arabicBigQuantity = Number(products[7].value);
-
+       
         const mediumPrice = Number((Number(mediumQuantity) * prices['MEDIUM']).toFixed(2));
         const smPrice = Number((Number(smQuantity) * prices['S/M']).toFixed(2));
         const pafitikiPrice = Number((Number(pafitikiQuantity) * prices['PAFITIKI']).toFixed(2));
         const blackPrice = Number((Number(blackQuantity) * prices['BLACK']).toFixed(2));
-        const partyPrice = Number((Number(partyQuantity) * prices['PARTY']).toFixed(2));
-        const greekPrice = Number((Number(greekQuantity) * prices['GREEK']).toFixed(2));
-        const arabicSmallPrice = Number((Number(arabicSmallQuantity) * prices['ARABIC SMALL']).toFixed(2));
-        const arabicBigPrice = Number((Number(arabicSmallQuantity) * prices['ARABIC BIG']).toFixed(2));
-
-
+      
         const allPrices = [
             mediumPrice,
             smPrice,
             pafitikiPrice,
             blackPrice,
-            partyPrice,
-            greekPrice,
-            arabicSmallPrice,
-            arabicBigPrice,
         ]
         let priceWithOutDDS = allPrices.reduce((a, c) => {
             return a + c;
@@ -127,11 +114,7 @@
         document.querySelector('.smPrice').textContent = smPrice.toFixed(2);
         document.querySelector('.pafitikiPrice').textContent = pafitikiPrice.toFixed(2);
         document.querySelector('.blackPrice').textContent = blackPrice.toFixed(2);
-        document.querySelector('.partyPrice').textContent = partyPrice.toFixed(2);
-        document.querySelector('.greekPrice').textContent = greekPrice.toFixed(2);
-        document.querySelector('.arabicSmallPrice').textContent = arabicSmallPrice.toFixed(2);
-        document.querySelector('.arabicBigPrice').textContent = arabicBigPrice.toFixed(2);
-
+       
 
         priceWithOutDDS = priceWithOutDDS.toFixed(2);
         document.querySelector('.priceWithOutDds').textContent = priceWithOutDDS
